@@ -1,21 +1,18 @@
-'use strict';
-
-const title='======================\n現在持っているタスク一覧\n======================';
-const tasklist=['掃除','買い物','散歩'];
+const arr=['掃除','買い物','散歩'];
 
 const out = () => {
-    console.log(title);
-    tasklist.forEach((element, index) => console.log(`${index} : ${element}`));
-//上記記載方法で、参考画像のとおり出力しようとしたものの、アポストロフィを表示しないやり方を思いつけなかった
-/*    for(let i=0 ; i < tasklist.length ; i++) {
-        console.log(`${i} : ${tasklist[i]}`);
-    } */
+    console.log('========================');
+    console.log('現在持っているタスク一覧');
+    console.log('========================');
+    for(let i=0 ; i < arr.length ; i++) {
+        console.log(`${i} : ${arr[i]}`);
+    }
 }
 
 const task = () => {
-    let job = prompt('タスクを入力してください。')
-    tasklist.push(job);
-    alert('新しいタスクを追加しました。');
+    let str = prompt("タスクを入力してください")
+    arr[arr.length] = str;
+    alert("新しいタスクを追加しました。");
     out();
     prompt("「確認,追加,削除,終了」の４つのいずれかを入力してください");
     task();
