@@ -6,7 +6,6 @@ const tasklist=['掃除','買い物','散歩'];
 const out = () => {
     console.log(title);
     tasklist.forEach((element, index) => console.log(`${index} : ${element}`));
-//上記記載方法で、参考画像のとおり出力しようとしたものの、アポストロフィを表示しないやり方を思いつけなかった
 /*    for(let i=0 ; i < tasklist.length ; i++) {
         console.log(`${i} : ${tasklist[i]}`);
     } */
